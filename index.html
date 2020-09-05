@@ -15,17 +15,24 @@
     <main>
         <div class='home-select'>
         <h2>How do you want to help?</h2>
-        <form id = 'js-nonprofit-form' class = 'home-form'>
+        <form id='js-nonprofit-form' class='home-form'>
             <h3>I want to volunteer and/or donate to local organizations</h3>
-            <input type = 'submit' class = 'js-nonprofit-button' value = 'Find Non-Profits'>
+            <button class='js-nonprofit-button'>Find NonProfits</button>
         </form>
-        <form id='js-petition-form' class = 'home-form'>
+        <form id='js-petition-form' class='home-form'>
             <h3>I want to sign petitions</h3>
-            <input type = 'submit' class = 'js-petition-button' value = 'Find Petitons'>
+            <button class='js-petition-button'>Find Petitions</button>
         </form>
+        </div>
+        <div class='findNonProfits hidden' id='js-findNonProfits'>
+            <button class='home'>Home</button>
+        </div>
+        <div class='findPetitions hidden' id='js-findPetitions'>
+            <button class='home'>Home</button>
         </div>
     </main>
     </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src='script.js'></script>   
 </body>
 </html>
