@@ -21,3 +21,16 @@ header {
     display: none;
 }
 
+.findNonProfits, .findPetitions{
+    text-align: center;
+}
+
+.button-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home, .see-petitions, .see-nonprofits {
+    margin: 10px;
+}
