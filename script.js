@@ -49,7 +49,7 @@ function getPetitions(search){
             <p>${responseJson.results[i].body}</p>
             `
         )};
-        $('#display-petitions').removeClass('hidden');
+        $('.display-petitions').removeClass('hidden');
     }
 
     function watchForm(){
