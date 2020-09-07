@@ -9,28 +9,14 @@ header {
     margin: 10px 0 50px 0;
 }
 
-.home-select {
+main {
     text-align: center;
 }
 
-.home-form {
-    margin: 20px 0;
+form {
+    margin: 15px 0;
 }
 
 .hidden {
     display: none;
-}
-
-.findNonProfits, .findPetitions{
-    text-align: center;
-}
-
-.button-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.home, .see-petitions, .see-nonprofits {
-    margin: 10px;
 }

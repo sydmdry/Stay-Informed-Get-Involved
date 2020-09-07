@@ -13,113 +13,16 @@
         <p>This is some filler text that will say something about something yay filler</p>
     </header>
     <main>
-        <div class='home-select'>
-        <h2>How do you want to help?</h2>
-        <form id='js-home-nonprofit-form' class='home-form'>
-            <h3>I want to volunteer and/or donate to local organizations</h3>
-            <button class='js-home-nonprofit-button'>Find Non-Profits</button>
-        </form>
-        <form id='js-home-petition-form' class='home-form'>
-            <h3>I want to sign petitions</h3>
-            <button class='js-home-petition-button'>Find Petitions</button>
-        </form>
-        </div>
-        <div class='findNonProfits hidden' id='js-findNonProfits'>
-            <div class='button-wrap-wrap'>
-            <h3>This is the non-profit page</h3>
-            <div class='button-wrap'>
-            <button class='home' id='js-home-button'>Home</button>
-            <button class='see-petitions' id='js-see-petitions'>See Petitions</button>
-            </div>
-            </div>
-            <form class='nonprofit-form' id='js-nonprofit-form'>
-                <label for='search-nonprofits'>Find non-profit by name, city, or keyword:</label>
-                <input type='text' class='search-nonprofits' id='js-search-nonprofits' name='search-nonprofits' placeholder='ex: "Denver", "housing"'><br>
-                <label for='state'>Search by state:</label>
-                <select id='js-state' name='state' class='js-state'>
-                    <option value="">Any State</option>
-                    <option value="AL">AL</option>
-	                <option value="AK">AK</option>
-	                <option value="AZ">AZ</option>
-	                <option value="AR">AR</option>
-	                <option value="CA">CA</option>
-	                <option value="CO">CO</option>
-	                <option value="CT">CT</option>
-	                <option value="DE">DE</option>
-	                <option value="DC">DC</option>
-	                <option value="FL">FL</option>
-	                <option value="GA">GA</option>
-	                <option value="HI">HI</option>
-	                <option value="ID">ID</option>
-	                <option value="IL">IL</option>
-	                <option value="IN">IN</option>
-	                <option value="IA">IA</option>
-	                <option value="KS">KS</option>
-	                <option value="KY">KY</option>
-	                <option value="LA">LA</option>
-	                <option value="ME">ME</option>
-	                <option value="MD">MD</option>
-	                <option value="MA">MA</option>
-	                <option value="MI">MI</option>
-	                <option value="MN">MN</option>
-	                <option value="MS">MS</option>
-	                <option value="MO">MO</option>
-	                <option value="MT">MT</option>
-	                <option value="NE">NE</option>
-	                <option value="NV">NV</option>
-	                <option value="NH">NH</option>
-	                <option value="NJ">NJ</option>
-	                <option value="NM">NM</option>
-	                <option value="NY">NY</option>
-	                <option value="NC">NC</option>
-	                <option value="ND">ND</option>
-	                <option value="OH">OH</option>
-	                <option value="OK">OK</option>
-	                <option value="OR">OR</option>
-	                <option value="PA">PA</option>
-	                <option value="RI">RI</option>
-	                <option value="SC">SC</option>
-	                <option value="SD">SD</option>
-	                <option value="TN">TN</option>
-	                <option value="TX">TX</option>
-	                <option value="UT">UT</option>
-	                <option value="VT">VT</option>
-	                <option value="VA">VA</option>
-	                <option value="WA">WA</option>
-	                <option value="WV">WV</option>
-	                <option value="WI">WI</option>
-                    <option value="WY">WY</option>
-                </select>
-                <label for='category'>Search by major category</label>
-                <select class='category' name='category' id='js-category'>
-                    <option value=''>Any Category</option>
-                    <option value='1'>Arts, Culture, & Humanities</option>
-                    <option value='2'>Education</option>
-                    <option value='3'>Enviroment and Animals</option>
-                    <option value='4'>Health</option>
-                    <option value='5'>Human Services</option>
-                    <option value='6'>International, Foreign Affairs</option>
-                    <option value='7'>Public, Societal Benefit</option>
-                    <option value='8'>Religion Related</option>
-                    <option value='9'>Mutual/Membership Benefit</option>
-                    <option value='10'>Unknown, Unclassified</option>
-                </select>
-                <button class='search-nonprofits-button'>Search</button>
-            </form>
-        </div>
-        <div class='findPetitions hidden' id='js-findPetitions'>
-            <h3>This is the petitions page</h3>
-            <div class='button-wrap'>
-            <button class='home' id='js-home-button'>Home</button>
-            <button class='see-nonprofits' id='js-see-nonprofits'>See Non-Profits</button>
-            </div>
+        <h2>Time to sign!</h2>
             <form class='petitions-form' id='js-petitions-form'>
-                <label for='search-petitions'>Search for a specific petition:</label>
-                <input type='text' id='search-petitions' name='search-petitions' placeholder='ex: Breonna Taylor'><button class='specific-petition-button'>Search</button><br>
-                <p>or</p><br>
-                <button class='search-petitions-button'>Show me any public/signable petitions</button>
+                <label for='search-petitions'>Search for a petition:</label>
+                <input type='text' id='js-search-petitions' name='search-petitions' placeholder='ex: Breonna Taylor'>
+                <button class='search-button' id='js-search-button'>Search</button>
             </form>
-        </div>
+            <p id='#js-error-message'></p>
+            <div class='display-petitions hidden'>
+            <ul id='js-petitons-list' class='petitions-list'></ul>
+            </div>
     </main>
     </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
