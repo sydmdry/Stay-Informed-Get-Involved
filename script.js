@@ -3,10 +3,9 @@
 
 const petitionsURL='https://api.whitehouse.gov/v1/petitions.json?';
 
-const newsURL='https://newsapi.org/v2/top-headlines?'
+const newsURL='https://gnews.io/api/v3/search?'
 
-const newsApiKey='37d1fa5af2a84f389a019d1f80faf045'
-
+const newsApiKey='392d5903e1ded5d1abf47f45de8887c7'
 
 
 function formatQueryParams(params){
@@ -44,9 +43,11 @@ function getPetitions(search){
 
 function getNews(search){
     const params={
-        apiKey: newsApiKey,
         q: search,
-        pageSize: 2
+        max: 2,
+        lang: 'en',
+        image: 'required',
+        token: newsApiKey
     }
     const queryString = formatQueryParams(params)
     const fullNewsURL = newsURL + queryString;
