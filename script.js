@@ -94,7 +94,7 @@ function displayNews(responseJson){
             `
         )};
         $('.display-petitions').removeClass('hidden');
-    }
+}
 
     function watchForm(){
         $('#js-petitions-form').on('click', '#js-search-button', function(event){
@@ -103,6 +103,6 @@ function displayNews(responseJson){
             getNews(searchVal);
             getPetitions(searchVal);
         })
-    }
+}
 
 $(watchForm);
