@@ -11,6 +11,7 @@ header {
 
 main {
     text-align: center;
+    width: 100%;
 }
 
 form {
@@ -20,3 +21,34 @@ form {
 .hidden {
     display: none;
 }
+
+.news-wrap ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.news-wrap ul img {
+    max-width: 95%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.petitions-wrap ul{
+    margin: 10px 20px;
+    width: 100%;
+}
+
+.news-wrap {
+    margin: 10px 10px;
+}
+
+.news-wrap ul li {
+    border: 1px solid black;
+    margin: 10px 10px;
+    width: 50%;
+}
+

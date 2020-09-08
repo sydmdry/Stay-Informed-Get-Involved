@@ -60,7 +60,25 @@ function getNews(search){
         }
         throw new Error(response.statusText);
     })
-    .then(responseJson => console.log(responseJson))
+    .then(responseJson => displayNews(responseJson))
+    .catch(err => {
+        $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
+}
+
+
+function displayNews(responseJson){
+    console.log(responseJson);
+    $('#js-news-list').empty();
+    for(let i=0; i<responseJson.articles.length; i++){
+        $('#js-news-list').append(
+            `<li><h3>${responseJson.articles[i].title}<h3>
+            <p>${responseJson.articles[i].publishedAt}</p>
+            <img src='${responseJson.articles[i].image}'>
+            <p>${responseJson.articles[i].description}</p>
+            <a href='${responseJson.articles[i].url}' target="_blank">${responseJson.articles[i].url}</a>`
+        )};
+        $('.display-news').removeClass('hidden');
 }
 
 
