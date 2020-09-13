@@ -44,9 +44,8 @@ function getPetitions(search){
 function getNews(search){
     const params={
         q: search,
-        max: 2,
+        max: 5,
         lang: 'en',
-        image: 'required',
         token: newsApiKey
     }
     const queryString = formatQueryParams(params)

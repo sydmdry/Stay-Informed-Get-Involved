@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='main.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto&display=swap" rel="stylesheet">
     <title>Let's get involved!</title>
 </head>
 <body>
     <div class='container'>
     <header>
-        <h1>Get Involved and Stay Informed</h1>
-        <p>This is some filler text that will say something about something yay filler</p>
+        <h1>Stay Informed. <br>Get Involved.</h1>
     </header>
     <main>
-        <h2>Search for something you care about and we will bring you the most recent and relevant news on that topic along with any White House petitions available to sign:</h2>
+        <div class='wrap'>
+         <h2>Find the most recent news on topics you care about along with any public White House petitions available to sign.</h2>
             <form class='petitions-form' id='js-petitions-form'>
-                <label for='search-petitions'>Search for a petition:</label>
-                <input type='text' id='js-search-petitions' name='search-petitions' placeholder='ex: Breonna Taylor, Trump'>
+                <input type='text' id='js-search-petitions' name='search-petitions' placeholder='ex: Breonna Taylor, Trump'><br>
                 <button class='search-button' id='js-search-button'>Search</button>
             </form>
+        </div>
+        <div class='display-results'>
+            <a name='results'></a>
             <p id='#js-error-message'></p>
-            <div class='display-news hidden'>
-                <div class='news-wrap'>
-                <ul id='js-news-list' class='news-list'></ul>
-                </div>
-            </div>
             <div class='display-petitions hidden'>
                 <div class='petitions-wrap'>
                 <ul id='js-petitons-list' class='petitions-list'></ul>
                 </div>
             </div>
+            <div class='display-news hidden'>
+                <div class='news-wrap'>
+                <ul id='js-news-list' class='news-list'></ul>
+                </div>
+            </div>
+        </div>
     </main>
     </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
