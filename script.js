@@ -46,6 +46,7 @@ function getNews(search){
         q: search,
         max: 5,
         lang: 'en',
+        nullable: 'None',
         token: newsApiKey
     }
     const queryString = formatQueryParams(params)

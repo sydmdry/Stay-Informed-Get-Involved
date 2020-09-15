@@ -8,6 +8,11 @@ html, body {
     overflow-x: hidden;
 }
 
+body, ul, li {
+    margin:0;
+    padding:0;
+}
+
 body {
     position: relative;
     background-image: url(images/capstone-background.jpg);
@@ -16,6 +21,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-color: black;
+}
+
+a {
+    font-family: 'Bebas Neue', cursive;
 }
 
 .hidden {
@@ -40,7 +49,7 @@ body {
 }
 
 .wrap {
-    margin: 20% 0 10px 0;
+    margin: 35% 0 10px 0;
     background-color: rgba(235, 219, 83, .6);
     padding: 25px;
     border-radius: 23%;
@@ -111,10 +120,81 @@ input[type=text]:focus{
     box-shadow: 0 0 0 2px #5E8AEB; 
 }
 
-li img {
-    max-width: 50%;
+
+.display-results {
+    margin-top: 25rem;
 }
 
-.display-results .display-petitions, .display-results .display-news {
-    max-width: 95%;
+.display-results .display-petitions ul, .display-results .display-news ul{
+    list-style-type: none;
+}
+
+.petitions-wrap .petitions-header{
+    background-color: rgba(197,70,235,0.1);
+    text-transform: uppercase;
+    padding: 15px 5px 0 0;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.petitions-header h2 {
+    color: #EBDB53;
+    margin: 0;
+    font-size: 23px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.petitions-header a{
+    margin: 0;
+    color: #5E8AEB;
+    font-size: 19px;
+    text-decoration: none;
+    border: 1px solid #EBDB53;
+    padding: 7px 11px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10%;
+}
+
+.petitions-header a:hover{
+    background-color: #EBDB53;
+}
+
+
+
+
+.display-results .petitions-wrap {
+    background-color: rgba(122,0,158,.6);
+}
+
+.display-results .display-petitions ul {
+    margin: 3rem 1rem;
+}
+
+
+.display-results .display-petitions ul li h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 19px;
+    color: white;
+    text-align: center;
+    margin: 0 45px;
+}
+
+.display-results .display-petitions ul li a{
+    color: #EBDB53;
+    font-size: 21px;
+    text-decoration-color: #5E8AEB;
+    padding: 15px 20px;
+}
+
+.display-results .display-petitions ul li p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #DADFF7;
+    background-color:  rgba(71,98,158,.7)
+}
+
+
+li img {
+    max-width: 75%;
 }
