@@ -73,10 +73,12 @@ function displayNews(responseJson){
     for(let i=0; i<responseJson.articles.length; i++){
         $('#js-news-list').append(
             `<li><h3>${responseJson.articles[i].title}<h3>
-            <p>${responseJson.articles[i].publishedAt}</p>
+            <div class='news-wrapper'>
+            <h4>${responseJson.articles[i].publishedAt}</h4>
             <img src='${responseJson.articles[i].image}'>
             <p>${responseJson.articles[i].description}</p>
-            <a href='${responseJson.articles[i].url}' target="_blank">${responseJson.articles[i].url}</a>`
+            <a href='${responseJson.articles[i].url}' target="_blank">View Full Article</a>
+            </div>`
         )};
         $('.display-news').removeClass('hidden');
 }
@@ -96,10 +98,14 @@ function displayNews(responseJson){
         $('.display-petitions').removeClass('hidden');
 }
 
+
+
     function watchForm(){
-        $('#js-petitions-form').on('click', '#js-search-button', function(event){
-            event.preventDefault();
+        $('#js-search-button').on('click', function(event){
             const searchVal=$('#js-search-petitions').val();
+            if(searchVal.length < 1){
+                alert('Please fill out this field.');
+            }
             getNews(searchVal);
             getPetitions(searchVal);
         })

@@ -9,6 +9,7 @@
     <title>Let's get involved!</title>
 </head>
 <body>
+    <a name='go-to-top'></a>
     <div class='container'>
     <header>
         <h1>Stay Informed. <br>Get Involved.</h1>
@@ -17,8 +18,8 @@
         <div class='wrap'>
          <h2>Find the most recent news on topics you care about along with any public White House petitions available to sign.</h2>
             <form class='petitions-form' id='js-petitions-form'>
-                <input type='text' id='js-search-petitions' name='search-petitions' placeholder='ex: Breonna Taylor, Trump' required><br>
-                <button class='search-button' id='js-search-button'>Search</button>
+                <input type='text' id='js-search-petitions' name='search-petitions' placeholder='ex: Breonna Taylor, Trump'><br>
+                <input class='search-button' type='submit' id='js-search-button'></input>
             </form>
         </div>
         <div class='display-results'>
@@ -33,10 +34,14 @@
                 </div>
             </div>
             <div class='display-news hidden'>
-                <div class='news-wrap'>
                 <a name='go-to-news'></a>
+                    <div class='news-wrap'>
+                    <div class='news-header'>
+                <h2>Recent News</h2>
+                <a href='#go-to-top'>Return to Search</a>
+                    </div>
                     <ul id='js-news-list' class='news-list'></ul>
-                </div>
+              </div>
             </div>
         </div>
     </main>

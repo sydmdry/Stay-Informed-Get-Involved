@@ -129,24 +129,24 @@ input[type=text]:focus{
     list-style-type: none;
 }
 
-.petitions-wrap .petitions-header{
-    background-color: rgba(197,70,235,0.1);
+.petitions-wrap .petitions-header, .news-wrap .news-header {
+    background-color: rgba(197,70,235,0.2);
     text-transform: uppercase;
     padding: 15px 5px 0 0;
     text-align: right;
     text-transform: uppercase;
 }
 
-.petitions-header h2 {
+.petitions-header h2, .news-header h2 {
     color: #EBDB53;
     margin: 0;
     font-size: 23px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.petitions-header a{
+.petitions-header a, .news-header a{
     margin: 0;
-    color: #5E8AEB;
+    color: #66C3FF;
     font-size: 19px;
     text-decoration: none;
     border: 1px solid #EBDB53;
@@ -154,44 +154,56 @@ input[type=text]:focus{
     text-align: center;
     display: inline-block;
     border-radius: 10%;
+    background-color: rgba(197,70,235,0.7);
 }
 
-.petitions-header a:hover{
+.petitions-header a:hover, .news-header a:hover{
     background-color: #EBDB53;
 }
 
 
 
 
-.display-results .petitions-wrap {
-    background-color: rgba(122,0,158,.6);
+.display-results .petitions-wrap, .display-results .news-wrap{
+    background-color: rgba(71,98,158,.6);
 }
 
-.display-results .display-petitions ul {
+.display-results .display-petitions ul, .display-results .display-news ul {
     margin: 3rem 1rem;
 }
 
-
-.display-results .display-petitions ul li h3 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 19px;
-    color: white;
-    text-align: center;
-    margin: 0 45px;
+.display-results .display-petitions ul li, .display-results .display-news ul li {
+    margin-top: 3rem;
 }
 
-.display-results .display-petitions ul li a{
+
+.display-results .display-petitions ul li h3, .display-results .display-news ul li h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    margin: 9px 35px;
+}
+
+.display-results .display-petitions ul li a, .display-results .display-news ul li a{
     color: #EBDB53;
     font-size: 21px;
     text-decoration-color: #5E8AEB;
     padding: 15px 20px;
 }
 
-.display-results .display-petitions ul li p{
+.display-results .display-petitions ul li p, .display-results .display-news .news-wrapper{
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     color: #DADFF7;
-    background-color:  rgba(71,98,158,.7)
+    background-color:  rgba(196,70,235,.7);
+    padding: 5px;
+}
+
+.display-results .display-news ul li h4{
+    color: #66C3FF;
+    font-size: 13px;
+    text-align: left;
 }
 
 
