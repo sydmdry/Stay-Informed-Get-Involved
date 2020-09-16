@@ -88,15 +88,15 @@ function displayNews(responseJson){
     function displayPetitions(responseJson){
         console.log(responseJson);
         $('#js-petitions-list').empty();
-        if(responseJson.results.length > 0) {
         for(let i=0; i<responseJson.results.length; i++){
+        if(responseJson.results.length > 0) {
         $('#js-petitions-list').append(
             `<li><h3>${responseJson.results[i].title}</h3>
             <a href='${responseJson.results[i].url}' target="_blank">Sign Here</a>
             <p>${responseJson.results[i].body}</p>
             `
-        )}}
-        else ()=> {
+        )}
+        else () {
         $('#js-petitions-list').append(
             `<li><h3>I'm sorry, we couldn't find any petitions to match your search.</h3>
             <a href='https://petitions.whitehouse.gov/' target="_blank">See All White House Petitions</a>`    
