@@ -1,9 +1,9 @@
 'use strict';
 
 
-const petitionsURL = 'https://api.whitehouse.gov/v1/petitions.json?';
+const petitionsURL = 'https://api.whitehouse.gov/v1/petitions.json';
 
-const newsURL = 'https://gnews.io/api/v3/search?'
+const newsURL = 'https://gnews.io/api/v4/search'
 
 const newsApiKey = '392d5903e1ded5d1abf47f45de8887c7'
 
@@ -24,7 +24,7 @@ function getPetitions(search) {
         limit: 5
     }
     const queryString = formatQueryParams(params)
-    const fullPetitionsURL = petitionsURL + queryString;
+    const fullPetitionsURL = petitionsURL + '?' + queryString;
     console.log(fullPetitionsURL)
 
     fetch(fullPetitionsURL)
@@ -50,7 +50,7 @@ function getNews(search) {
         token: newsApiKey
     }
     const queryString = formatQueryParams(params)
-    const fullNewsURL = newsURL + queryString;
+    const fullNewsURL = newsURL + '?' + queryString;
     console.log(fullNewsURL)
 
     fetch(fullNewsURL)
@@ -110,6 +110,7 @@ function displayPetitions(responseJson) {
 
 function watchForm() {
     $('#js-search-button').on('click', function(event) {
+        event.preventDefault();
         const searchVal = $('#js-search').val();
         if (searchVal.length < 1) {
             alert('Please fill out this field.');
