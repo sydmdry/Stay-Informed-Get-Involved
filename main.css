@@ -162,8 +162,6 @@ input[type=text]:focus{
 }
 
 
-
-
 .display-results .petitions-wrap, .display-results .news-wrap{
     background-color: rgba(71,98,158,.6);
 }
@@ -209,4 +207,48 @@ input[type=text]:focus{
 
 li img {
     max-width: 75%;
+}
+
+
+
+@media all and (min-width: 650px){
+    .container header h1 {
+        font-size: 25px;
+    }
+    header br {
+        content:' ';
+    }
+    .wrap h2 {
+        font-size: 30px;
+    }
+    .display-results {
+        margin-top: 5rem;
+    }
+    .petitions-header h2, .news-header h2 {
+        font-size: 26px;
+    }
+    .display-results .display-petitions ul li h3, .display-results .display-news ul li h3 {
+        font-size: 24px;
+    }
+    .display-results .display-petitions ul li p, .display-results .display-news .news-wrapper p{
+        font-size: 21px;
+    }
+    .display-results .display-news ul li h4{
+        font-size: 15px;
+    }
+}
+@media all and (min-width: 800px){
+    .wrap {
+        margin: 15% 0 10px 0;
+    }
+    .display-results .display-petitions ul li, .display-results .display-news ul li {
+        margin-top: 5rem;
+    }
+    .display-results .display-petitions ul li a, .display-results .display-news ul li a{
+        font-size: 23px;
+    }
+    li img {
+        max-width: 60%;
+    }
+    
 }
