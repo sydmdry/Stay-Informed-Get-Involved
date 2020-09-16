@@ -8,6 +8,7 @@ const newsURL = 'https://gnews.io/api/v4/search'
 const newsApiKey = '392d5903e1ded5d1abf47f45de8887c7'
 
 
+//format params for both petitions and news url
 function formatQueryParams(params) {
     const queryItems = Object.keys(params)
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
@@ -15,6 +16,8 @@ function formatQueryParams(params) {
 }
 
 
+//pass search value, create params, format params, create full petitions url
+//create request 
 function getPetitions(search) {
     const params = {
         isPublic: 1,
@@ -41,6 +44,8 @@ function getPetitions(search) {
 }
 
 
+//pass search value, create params, format params, create full news url
+//create request
 function getNews(search) {
     const params = {
         q: search,
@@ -66,11 +71,14 @@ function getNews(search) {
         });
 }
 
+
+//format date returned by news api
 function formatDate(date){
-    try{return dayjs(date).format('MM/DD/YYYY');}
-    catch(err){console.log(err)}
+    return dayjs(date).format('MM/DD/YYYY');
 }
 
+
+//handle response and display news results 
 function displayNews(responseJson) {
     console.log(responseJson);
     $('#js-news-list').empty();
@@ -91,7 +99,7 @@ function displayNews(responseJson) {
 }
 
 
-
+//handle response and display petition results
 function displayPetitions(responseJson) {
     console.log(responseJson);
     $('#js-petitions-list').empty();
@@ -112,7 +120,7 @@ function displayPetitions(responseJson) {
     $('.display-petitions').removeClass('hidden');
 }
 
-
+//watch initial form and search
 function watchForm() {
     $('#js-search-button').on('click', function(event) {
         event.preventDefault();
