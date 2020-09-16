@@ -28,7 +28,6 @@ function getPetitions(search) {
     }
     const queryString = formatQueryParams(params)
     const fullPetitionsURL = petitionsURL + '?' + queryString;
-    console.log(fullPetitionsURL)
 
     fetch(fullPetitionsURL)
         .then(response => {
@@ -56,7 +55,6 @@ function getNews(search) {
     }
     const queryString = formatQueryParams(params)
     const fullNewsURL = newsURL + '?' + queryString;
-    console.log(fullNewsURL)
 
     fetch(fullNewsURL)
         .then(response => {
