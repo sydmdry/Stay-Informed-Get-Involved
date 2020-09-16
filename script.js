@@ -66,19 +66,25 @@ function getNews(search) {
         });
 }
 
+function formatDate(date){
+    try{return dayjs(date).format('MM/DD/YYYY');}
+    catch(err){console.log(err)}
+}
 
 function displayNews(responseJson) {
     console.log(responseJson);
     $('#js-news-list').empty();
     for (let i = 0; i < responseJson.articles.length; i++) {
+        console.log('loops')
         $('#js-news-list').append(
             `<li><h3>${responseJson.articles[i].title}<h3>
             <div class='news-wrapper'>
-            <h4>${responseJson.articles[i].publishedAt}</h4>
+            <h4>${formatDate(responseJson.articles[i].publishedAt)}</h4>
             <img src='${responseJson.articles[i].image}'>
             <p>${responseJson.articles[i].description}</p>
             <a href='${responseJson.articles[i].url}' target="_blank">View Full Article</a>
-            </div>`
+            </div>
+            </li>`
         )
     };
     $('.display-news').removeClass('hidden');
@@ -89,22 +95,21 @@ function displayNews(responseJson) {
 function displayPetitions(responseJson) {
     console.log(responseJson);
     $('#js-petitions-list').empty();
+    if(responseJson.results.length === 0) {
+        $('#js-petitions-list').append(
+            `<li><h3>I'm sorry, we couldn't find any petitions to match your search.</h3>
+        <a href='https://petitions.whitehouse.gov/' target="_blank">See All White House Petitions</a></li>`
+        )
+    }
     for (let i = 0; i < responseJson.results.length; i++) {
-        if (responseJson.results.length > 0) {
             $('#js-petitions-list').append(
                 `<li><h3>${responseJson.results[i].title}</h3>
             <a href='${responseJson.results[i].url}' target="_blank">Sign Here</a>
-            <p>${responseJson.results[i].body}</p>
+            <p>${responseJson.results[i].body}</p></li>
             `
             )
-        } else {
-            $('#js-petitions-list').append(
-                `<li><h3>I'm sorry, we couldn't find any petitions to match your search.</h3>
-            <a href='https://petitions.whitehouse.gov/' target="_blank">See All White House Petitions</a>`
-            )
         }
-        $('.display-petitions').removeClass('hidden');
-    }
+    $('.display-petitions').removeClass('hidden');
 }
 
 
